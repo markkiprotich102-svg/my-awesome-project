@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mark Kiprotich - Professional Robotics Trainer &amp; Web Developer in Mombasa, Kenya. Expert in Python, C++, Scratch, VEX, LEGO Robotics &amp; Website Creation."/>
+  <meta name="keywords" content="Robotics Trainer, Python, C++, Scratch, VEX Robotics, LEGO, Kenya Science Engineering Fair, Code Festival, Web Developer Mombasa"/>
+  <title>Mark Kiprotich | Robotics Trainer &amp; Web Developer</title>
+  
+  <!-- Tailwind CSS CDN (makes it look professional instantly) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+    
+    :root {
+      --primary: #1e40af;
+    }
+    [data-theme="dark"] {
+      --primary: #60a5fa;
+    }
+    
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    .heading-font {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    
+    .hero-bg {
+      background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    }
+    .nav-link {
+      transition: all 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #3b82f6;
+      transform: translateY(-2px);
+    }
+    
+    .section-title {
+      position: relative;
+    }
+    .section-title:after {
+      content: '';
+      position: absolute;
+      width: 60px;
+      height: 3px;
+      background: #3b82f6;
+      bottom: -8px;
+      left: 0;
+    }
+    
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .card-hover:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    }
+    
+    .tail-img {
+      transition: transform 0.5s ease;
+    }
+    .gallery-card:hover .tail-img {
+      transform: scale(1.08);
+    }
+  </style>
+</head>
+<body class="bg-gray-50 dark:bg-slate-950 text-slate-800 dark:text-slate-200">
+
+  <!-- NAVBAR -->
+  <nav class="bg-white dark:bg-slate-900 shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-blue-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold heading-font">MK</div>
+        <div>
+          <span class="font-semibold text-xl sm:text-2xl heading-font tracking-tight">Mark Kiprotich</span>
+        </div>
+      </div>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#qualifications" class="nav-link">Qualifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      
+      <div class="flex items-center gap-3 sm:gap-4">
+        <button onclick="toggleTheme()" id="themeBtn"
+          class="w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-xl sm:text-2xl rounded-2xl hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+          🌙
+        </button>
+        <a href="#contact" 
+          class="bg-blue-600 hover:bg-blue-700 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl font-semibold text-sm transition-all">
+          Get In Touch
+        </a>
+        
+        <!-- Mobile Hamburger -->
+        <button id="mobileMenuBtn" class="md:hidden w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center text-2xl sm:text-3xl">
+          ☰
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-t px-4 sm:px-6 py-6">
+      <div class="flex flex-col gap-5 text-lg">
+        <a href="#about" class="nav-link">About Me</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#qualifications" class="nav-link">Qualifications</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero-bg text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 pt-16 pb-20 sm:pt-24 sm:pb-32 lg:pt-32 lg:pb-40 flex flex-col md:flex-row items-center gap-10 md:gap-16">
+      <div class="text-center md:text-left">
+        <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-4 sm:px-5 py-2 rounded-3xl text-xs sm:text-sm mb-6">
+          🇰🇪 NAKURU,NAIROBI, Kenya
+        </div>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold heading-font tracking-tighter leading-none mb-4">
+          Mark Kiprotich
+        </h1>
+        <p class="text-2xl sm:text-3xl md:text-4xl text-blue-100 mb-8">
+          Robotics Trainer &amp; Web Developer
+        </p>
+        <p class="text-lg sm:text-xl max-w-lg text-blue-100 mb-10 mx-auto md:mx-0">
+          1st Place Code Festival Winner • VEX &amp; LEGO Robotics Expert • 
+          Passionate about teaching the next generation of Kenyan innovators
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <a href="#contact" 
+            class="bg-white text-blue-700 hover:bg-blue-50 font-semibold px-8 sm:px-10 py-3.5 sm:py-4 rounded-3xl text-base sm:text-lg inline-flex items-center justify-center gap-3 transition-all">
+            Hire Me for Training
+            <span class="text-xl sm:text-2xl">→</span>
+          </a>
+          
+          <a href="#projects" 
+            class="border-2 border-white hover:bg-white/10 font-semibold px-8 sm:px-10 py-3.5 sm:py-4 rounded-3xl text-base sm:text-lg transition-all text-center">
+            View My Work
+          </a>
+        </div>
+        
+        <div class="mt-12 sm:mt-16 flex flex-wrap gap-6 sm:gap-8 justify-center md:justify-start text-sm">
+          <div>
+            <div class="text-blue-200">WINNER</div>
+            <div class="text-2xl sm:text-3xl font-semibold">Code Festival 2025</div>
+          </div>
+          <div>
+            <div class="text-blue-200">EXPERT IN</div>
+            <div class="text-2xl sm:text-3xl font-semibold">VEX • LEGO • Web Dev</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Hero Visual -->
+      <div class="relative w-full md:w-5/12 lg:w-1/2">
+        <div class="absolute -inset-4 bg-white/10 backdrop-blur-3xl rounded-[4rem] rotate-6 hidden md:block"></div>
+        <img src="_MG_0760.jpg" 
+             alt="Mark Kiprotich - Robotics Trainer"
+             class="rounded-3xl shadow-2xl relative z-10 w-full h-auto object-contain border-4 sm:border-8 border-white max-h-[500px] mx-auto"
+             loading="lazy">
+        <div class="mt-6 text-center md:absolute md:-bottom-6 md:-right-6 bg-white dark:bg-slate-900 text-blue-700 dark:text-blue-400 px-5 sm:px-6 py-2.5 sm:py-3 rounded-3xl shadow-xl text-sm font-semibold inline-flex items-center gap-3">
+          <div class="w-4 h-4 bg-green-400 rounded-full animate-pulse"></div>
+          Available for Workshops
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="grid md:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div class="md:col-span-5">
+        <img src="_MG_0758.jpg" 
+             alt="Mark Kiprotich teaching robotics" 
+             class="rounded-3xl shadow-2xl w-full h-auto object-cover"
+             loading="lazy">
+      </div>
+      <div class="md:col-span-7 text-center md:text-left">
+        <span class="text-blue-600 font-semibold tracking-widest text-sm">WHO I AM</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold heading-font mt-4 mb-6">Passionate Robotics Trainer &amp; Self-taught Web Developer</h2>
+        <p class="text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-400">
+          Recently completed Form Four (KCSE 2025) and already making waves in STEM education. 
+          I specialize in teaching students how to build and program real robots using VEX and LEGO platforms. 
+          I also have strong knowledge in website creation — I designed and coded this entire professional portfolio myself using modern web technologies.
+        </p>
+        <div class="mt-10 grid grid-cols-2 gap-6 sm:gap-8">
+          <div class="flex flex-col items-center md:items-start gap-2">
+            <div class="text-5xl">🚀</div>
+            <div>
+              <div class="font-semibold text-xl sm:text-2xl">100+</div>
+              <div class="text-sm text-slate-500">Students Trained</div>
+            </div>
+          </div>
+          <div class="flex flex-col items-center md:items-start gap-2">
+            <div class="text-5xl">🏆</div>
+            <div>
+              <div class="font-semibold text-xl sm:text-2xl">National Winner</div>
+              <div class="text-sm text-slate-500">Code Festival 2025</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="bg-white dark:bg-slate-900 py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 sm:mb-16">
+        <span class="text-blue-600 font-semibold">EXPERTISE</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold heading-font mt-3">What I Bring to the Table</h2>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+        <!-- Skill Card 1 -->
+        <div class="bg-gray-50 dark:bg-slate-800 p-6 sm:p-8 rounded-3xl card-hover">
+          <div class="text-5xl sm:text-6xl mb-5 sm:mb-6">🤖</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-4">Robotics Mastery</h3>
+          <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            <li class="flex items-center gap-3">✓ VEX Robotics (V5, IQ, EXP)</li>
+            <li class="flex items-center gap-3">✓ LEGO Mindstorms / Spike Prime</li>
+            <li class="flex items-center gap-3">✓ Robot design &amp; competition strategy</li>
+          </ul>
+        </div>
+        
+        <!-- Skill Card 2 -->
+        <div class="bg-gray-50 dark:bg-slate-800 p-6 sm:p-8 rounded-3xl card-hover">
+          <div class="text-5xl sm:text-6xl mb-5 sm:mb-6">💻</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-4">Programming Languages</h3>
+          <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            <li class="flex items-center gap-3">✓ Python (Advanced)</li>
+            <li class="flex items-center gap-3">✓ C++ (Competitive level)</li>
+            <li class="flex items-center gap-3">✓ Scratch (Beginner to advanced)</li>
+          </ul>
+        </div>
+        
+        <!-- Skill Card 3 - NEW -->
+        <div class="bg-gray-50 dark:bg-slate-800 p-6 sm:p-8 rounded-3xl card-hover border-2 border-blue-500">
+          <div class="text-5xl sm:text-6xl mb-5 sm:mb-6">🌐</div>
+          <h3 class="text-xl sm:text-2xl font-semibold mb-4">Website Creation</h3>
+          <p class="text-blue-600 font-medium mb-4">Professional Web Development</p>
+          <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            <li class="flex items-center gap-3">✓ HTML5, CSS3, JavaScript</li>
+            <li class="flex items-center gap-3">✓ Tailwind CSS &amp; Responsive Design</li>
+            <li class="flex items-center gap-3">✓ Built this portfolio from scratch</li>
+            <li class="flex items-center gap-3">✓ Ready to build websites for schools &amp; businesses</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS / ROBOTS -->
+  <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="text-center mb-12 sm:mb-16">
+      <span class="text-blue-600 font-semibold">WORK & PROJECTS</span>
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold heading-font mt-3">Robots I’ve Built & Competed With</h2>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <div class="gallery-card bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl">
+        <div class="bg-gray-100 dark:bg-slate-800 flex items-center justify-center min-h-[200px] sm:min-h-[280px]">
+          <img 
+            src="_MG_0756.jpg"
+            alt="VEX V5 Competition Robot built and competed with by Mark Kiprotich"
+            class="tail-img w-full max-h-[280px] object-contain p-4 sm:p-6"
+            loading="lazy"
+          >
+        </div>
+        <div class="p-6 sm:p-8">
+          <h4 class="font-semibold text-lg sm:text-xl">VEX FOR KENYA SCIENCE AND Engineering FAIR</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">Award-winning autonomous + driver control bot</p>
+        </div>
+      </div>
+      
+      <div class="gallery-card bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl">
+        <div class="bg-gray-100 dark:bg-slate-800 flex items-center justify-center min-h-[200px] sm:min-h-[280px]">
+          <img 
+            src="_MG_0747.jpg"
+            alt="VEX Turning Point Robot - high precision shooter and lift mechanism"
+            class="tail-img w-full max-h-[280px] object-contain p-4 sm:p-6"
+            loading="lazy"
+          >
+        </div>
+        <div class="p-6 sm:p-8">
+          <h4 class="font-semibold text-lg sm:text-xl">VEX Turning Point Robot</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">High-precision shooter & lift mechanism</p>
+        </div>
+      </div>
+      
+      <div class="gallery-card bg-white dark:bg-slate-900 rounded-3xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl">
+        <div class="bg-gray-100 dark:bg-slate-800 flex items-center justify-center min-h-[200px] sm:min-h-[280px]">
+          <img 
+            src="_MG_0760.jpg"
+            alt="LEGO EV3 Competition Robot - FLL style with multiple sensors"
+            class="tail-img w-full max-h-[280px] object-contain p-4 sm:p-6"
+            loading="lazy"
+          >
+        </div>
+        <div class="p-6 sm:p-8">
+          <h4 class="font-semibold text-lg sm:text-xl">VEX iq second generation Bot</h4>
+          <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">FLL-style robot with multiple sensors</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements" class="bg-white dark:bg-slate-900 py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-12 sm:mb-16">
+        <span class="text-blue-600 font-semibold">HONORS</span>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold heading-font mt-3">My Achievements</h2>
+      </div>
+      <div class="max-w-2xl mx-auto space-y-8">
+        <div class="flex gap-6 sm:gap-8">
+          <div class="text-6xl sm:text-7xl font-black text-blue-200">01</div>
+          <div>
+            <h3 class="text-xl sm:text-2xl font-semibold">1st Position – National Code Festival 2025</h3>
+            <p class="text-slate-500">Competed against top young programmers across Kenya</p>
+          </div>
+        </div>
+        <div class="flex gap-6 sm:gap-8">
+          <div class="text-6xl sm:text-7xl font-black text-blue-200">02</div>
+          <div>
+            <h3 class="text-xl sm:text-2xl font-semibold">Kenya Science &amp; Engineering Fair Participant</h3>
+            <p class="text-slate-500">Showcased innovative robotics projects</p>
+          </div>
+        </div>
+        <div class="flex gap-6 sm:gap-8">
+          <div class="text-6xl sm:text-7xl font-black text-blue-200">03</div>
+          <div>
+            <h3 class="text-xl sm:text-2xl font-semibold">Professional Portfolio Creator</h3>
+            <p class="text-slate-500">Designed and coded this modern website entirely by myself</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUALIFICATIONS -->
+  <section id="qualifications" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold heading-font mb-10 sm:mb-12">Qualifications &amp; Education</h2>
+      
+      <div class="bg-white dark:bg-slate-900 rounded-3xl p-8 sm:p-12 shadow-xl">
+        <div class="space-y-8 sm:space-y-10">
+          <div class="flex flex-col sm:flex-row justify-between items-start gap-4">
+            <div>
+              <div class="font-semibold text-xl sm:text-2xl">Kenya Certificate of Secondary Education (KCSE)</div>
+              <div class="text-slate-500">Completed Form Four • 2025</div>
+            </div>
+            <div class="text-right text-sm text-blue-600">Mombasa County</div>
+          </div>
+          
+          <div class="border-t border-dashed"></div>
+          
+          <div>
+            <div class="font-semibold text-xl sm:text-2xl text-blue-600">Robotics Trainer Certification</div>
+            <div class="mt-2 text-slate-600 dark:text-slate-400">
+              Hands-on training with VEX Robotics and LEGO Mindstorms platforms
+            </div>
+          </div>
+          
+          <div>
+            <div class="font-semibold text-xl sm:text-2xl text-blue-600">Web Development Skills</div>
+            <div class="mt-2 text-slate-600 dark:text-slate-400">
+              Proficient in HTML, CSS, JavaScript &amp; Tailwind CSS.<br>
+              Built multiple professional websites including this portfolio.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-gradient-to-br from-blue-700 to-indigo-700 text-white py-16 sm:py-24">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold heading-font mb-6">Let’s Build the Future Together</h2>
+      <p class="text-lg sm:text-xl mb-10 sm:mb-12 max-w-lg mx-auto">Whether you need robotics training for your school, coding workshops, or a professional website — I’m ready to help.</p>
+      
+      <form id="contactForm" class="max-w-lg mx-auto bg-white/10 backdrop-blur-xl p-8 sm:p-10 rounded-3xl">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm mb-2">Your Name</label>
+            <input id="name" type="text" required class="w-full bg-white/20 border border-white/30 rounded-2xl px-6 py-4 text-white placeholder:text-white/70 focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-sm mb-2">Email or Phone</label>
+            <input id="email" type="text" required class="w-full bg-white/20 border border-white/30 rounded-2xl px-6 py-4 text-white placeholder:text-white/70 focus:outline-none">
+          </div>
+        </div>
+        <div class="mt-6">
+          <label class="block text-sm mb-2">Subject</label>
+          <input id="subject" type="text" required placeholder="Robotics Workshop / Website Project" 
+                 class="w-full bg-white/20 border border-white/30 rounded-2xl px-6 py-4 text-white placeholder:text-white/70 focus:outline-none">
+        </div>
+        <div class="mt-6">
+          <label class="block text-sm mb-2">Message</label>
+          <textarea id="message" rows="5" required placeholder="Tell me how I can help your school or team..." 
+                    class="w-full bg-white/20 border border-white/30 rounded-3xl px-6 py-4 text-white placeholder:text-white/70 focus:outline-none"></textarea>
+        </div>
+        
+        <button type="submit" 
+          class="mt-8 w-full bg-white text-blue-700 hover:bg-blue-50 font-bold py-5 sm:py-6 rounded-3xl text-base sm:text-lg transition-all">
+          Send Message via WhatsApp
+        </button>
+      </form>
+      
+      <p class="text-sm text-white/70 mt-6">Your message will open directly in WhatsApp for instant reply</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-3 gap-10 sm:gap-12">
+      <div>
+        <div class="flex items-center gap-3 text-white mb-6">
+          <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center text-2xl">MK</div>
+          <span class="text-2xl font-bold heading-font">Mark Kiprotich</span>
+        </div>
+        <p class="text-sm">Passionate robotics trainer and web developer from Mombasa, Kenya.</p>
+      </div>
+      
+      <div>
+        <div class="font-semibold text-white mb-4">Quick Links</div>
+        <div class="space-y-3 text-sm">
+          <a href="#about" class="block hover:text-white">About</a>
+          <a href="#skills" class="block hover:text-white">Skills</a>
+          <a href="#projects" class="block hover:text-white">Projects</a>
+        </div>
+      </div>
+      
+      <div>
+        <div class="font-semibold text-white mb-4">Contact Me</div>
+        <a href="tel:+254756694907" class="block hover:text-white">0756 694 907</a>
+        <a href="mailto:markkiprotich102@gmail.com" class="block hover:text-white">markkiprotich102@gmail.com</a>
+        <div class="flex gap-6 mt-8">
+          <a href="https://wa.me/254756694907" target="_blank" class="text-3xl hover:text-green-400">📱</a>
+          <a href="mailto:markkiprotich102@gmail.com" class="text-3xl hover:text-blue-400">✉️</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center text-xs sm:text-sm mt-12 sm:mt-20 text-slate-500">
+      © 2026 Mark Kiprotich • Built with passion in Mombasa, Kenya
+    </div>
+  </footer>
+
+  <script>
+    // Dark mode toggle
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      const newTheme = current === 'dark' ? 'light' : 'dark';
+      html.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      document.getElementById('themeBtn').textContent = newTheme === 'dark' ? '☀️' : '🌙';
+    }
+
+    // Mobile menu
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // WhatsApp Form Submission
+    const form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const subject = document.getElementById('subject').value.trim();
+        const msg = document.getElementById('message').value.trim();
+        
+        if (!name || !email || !subject || !msg) {
+          alert("Please fill in all fields");
+          return;
+        }
+        
+        const whatsappMessage = 
+          `*New Inquiry from Portfolio*%0A%0A` +
+          `*Name:* ${name}%0A` +
+          `*Email/Phone:* ${email}%0A` +
+          `*Subject:* ${subject}%0A%0A` +
+          `*Message:*%0A${msg}`;
+        
+        const phoneNumber = '254756694907';
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+        
+        window.open(whatsappUrl, '_blank');
+        
+        alert("Opening WhatsApp... Ready to send!");
+        form.reset();
+      });
+    }
+
+    // Smooth scrolling for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        if (this.getAttribute('href') !== '#') {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Initial theme setup
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.getElementById('themeBtn').textContent = savedTheme === 'dark' ? '☀️' : '🌙';
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        document.getElementById('themeBtn').textContent = '☀️';
+      }
+    });
+  </script>
+</body>
+</html>
